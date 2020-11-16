@@ -1,17 +1,13 @@
 package com.example.basiclab;
 
 import android.os.Bundle;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
     }
 
     @Override
@@ -48,22 +43,13 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Snackbar.make(getWindow().getDecorView(), "Ustawienia", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-            return true;
+        String massage = "";
+        switch(id){
+            case R.id.FirstFragment: massage = "First fragment"; break;
+            case R.id.SecoundFragment: massage = "Secound fragment"; break;
+            case R.id.ThirdFragment: massage = "Third fragment"; break;
         }
-        if(id==R.id.Previous){
-            Snackbar.make(getWindow().getDecorView(), "Poprzedni", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-            return true;
-        }
-        if(id==R.id.Next){
-            Snackbar.make(getWindow().getDecorView(), "Następny", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-            return true;
-        }
-
+        Snackbar.make(findViewById(R.id.rootLayout), massage, Snackbar.LENGTH_LONG).show();
         return super.onOptionsItemSelected(item);
     }
 }

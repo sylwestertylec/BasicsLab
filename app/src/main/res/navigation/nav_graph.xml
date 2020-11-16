@@ -13,16 +13,16 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/SecoundFragment" />
         <action
             android:id="@+id/action_FirstFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/SecoundFragment"
         android:name="com.example.basiclab.SecondFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_secound">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
@@ -41,6 +41,6 @@
             app:destination="@id/FirstFragment" />
         <action
             android:id="@+id/action_thirdFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/SecoundFragment" />
     </fragment>
 </navigation>

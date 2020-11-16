@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.basiclab.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/FirstFragment"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/first_fragment_label"
         app:showAsAction="never" />
     <item
-        android:id="@+id/Previous"
+        android:id="@+id/SecoundFragment"
+        android:actionLayout="@layout/fragment_secound"
         android:orderInCategory="101"
-        android:title="@string/previous"
-        app:showAsAction="never"/>
+        android:title="Secound Fragment"
+        app:showAsAction="never" />
     <item
-        android:id="@+id/Next"
+        android:id="@+id/ThirdFragment"
         android:orderInCategory="102"
-        android:title="@string/next" />
+        android:title="@string/third_fragment_label" />
 </menu>
